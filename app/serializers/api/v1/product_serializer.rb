@@ -3,7 +3,8 @@ class Api::V1::ProductSerializer < ActiveModel::Serializer
               :name,
               :description,
               :price,
-              :created_at
+              :created_at,
+              :provider_id
 
   embed :ids, include: true
 

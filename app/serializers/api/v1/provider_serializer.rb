@@ -2,7 +2,8 @@ class Api::V1::ProviderSerializer < ActiveModel::Serializer
   attributes  :id,
               :name,
               :email,
-              :product_ids
+              :product_ids,
+              :address_id
 
   embed :ids, include: true
 
