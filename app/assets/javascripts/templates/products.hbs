@@ -1,4 +1,6 @@
 <h1>Products</h1>
+{{view Em.TextField valueBinding='filter'}}
+<button {{action 'applyFilter'}}>Filter by Provider</button>
 <table>
   <thead>
     <th {{action 'sort' 'name'}}>Name</th>
