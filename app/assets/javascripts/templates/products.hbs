@@ -1,6 +1,21 @@
 <h1>Products</h1>
-<ul>
-  {{#each}}
-    <li>{{name}}</li>
-  {{/each}}
-</ul>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Provider</th>
+    <th>Created at</th>
+  </thead>
+  <tbody>
+    {{#each}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{price}}</td>
+        <td>{{provider.name}}</td>
+        <td>{{createdAt}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
