@@ -5,7 +5,8 @@ DumbStore.ProductsController = Em.ArrayController.extend
       @set('sortAscending', !@get('sortAscending'))
 
     applyFilter: ->
-      filtered = @get('content').filter ((product) ->
+      return @set('content', @get('all')) if @get('filter') is ''
+      filtered = @get('all').filter ((product) ->
           product.get('provider.name') is @get('filter')
       ).bind(@)
 
