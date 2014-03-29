@@ -12,14 +12,16 @@
   </thead>
   <tbody>
     {{#each}}
-      <tr>
-        <td>{{name}}</td>
-        <td>{{description}}</td>
-        <td>{{price}}</td>
-        <td>{{provider.name}}</td>
-        <td>{{formatDate createdAt}}</td>
-        <td><button {{action 'delete' this}}>Delete</button></td>
-      </tr>
+      {{#if name}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>{{price}}</td>
+          <td>{{provider.name}}</td>
+          <td>{{formatDate createdAt}}</td>
+          <td><button {{action 'delete' this}}>Delete</button></td>
+        </tr>
+      {{/if}}
     {{/each}}
   </tbody>
 </table>

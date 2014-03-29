@@ -3,6 +3,16 @@
 </p>
 
 <p>
+  Provider: {{view Em.Select
+              content=providers
+              optionValuePath='content'
+              optionLabelPath='content.name'
+              selectionBinding='content.provider'
+              prompt='Choose a provider'
+              }}
+</p>
+
+<p>
   Description: {{view Em.TextField valueBinding='description'}}
 </p>
 
