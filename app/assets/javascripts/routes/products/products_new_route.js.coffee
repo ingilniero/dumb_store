@@ -4,6 +4,7 @@ DumbStore.ProductsNewRoute = Em.Route.extend
 
   actions:
     createProduct: ->
-      @modelFor('productsNew').save().then (product) ->
+      @modelFor('productsNew').save().then ((product) ->
         alert("Product created")
-
+        @transitionTo('products')
+      ).bind(@)
