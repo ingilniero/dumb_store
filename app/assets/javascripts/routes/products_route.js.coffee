@@ -5,3 +5,9 @@ DumbStore.ProductsRoute = Em.Route.extend
   setupController: (controller, model) ->
     controller.set('content', model)
     controller.set('all', model)
+
+  actions:
+    delete: (product) ->
+      product.deleteRecord()
+      product.save().then (product) ->
+        alert('Product destroyed')

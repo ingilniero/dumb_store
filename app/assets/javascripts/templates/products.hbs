@@ -8,6 +8,7 @@
     <th {{action 'sort' 'price'}}>Price</th>
     <th>Provider</th>
     <th>Created at</th>
+    <th>Actions</th>
   </thead>
   <tbody>
     {{#each}}
@@ -17,6 +18,7 @@
         <td>{{price}}</td>
         <td>{{provider.name}}</td>
         <td>{{formatDate createdAt}}</td>
+        <td><button {{action 'delete' this}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>
