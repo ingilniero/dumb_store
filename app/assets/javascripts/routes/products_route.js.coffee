@@ -11,3 +11,6 @@ DumbStore.ProductsRoute = Em.Route.extend
       product.deleteRecord()
       product.save().then (product) ->
         alert('Product destroyed')
+
+    edit: (product) ->
+      @transitionTo('products.edit', product.get('id'))

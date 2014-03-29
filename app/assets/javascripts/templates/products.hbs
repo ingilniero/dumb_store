@@ -19,7 +19,10 @@
           <td>{{price}}</td>
           <td>{{provider.name}}</td>
           <td>{{formatDate createdAt}}</td>
-          <td><button {{action 'delete' this}}>Delete</button></td>
+          <td>
+            <button {{action 'delete' this}}>Delete</button>
+            <button {{action 'edit' this}}>Edit</button>
+          </td>
         </tr>
       {{/if}}
     {{/each}}
