@@ -1,4 +1,7 @@
 DumbStore.ProductsController = Em.ArrayController.extend
+  filter: ''
+  all: Em.A()
+
   actions:
     sort: (field) ->
       @set('sortProperties', [field])
@@ -12,4 +15,3 @@ DumbStore.ProductsController = Em.ArrayController.extend
 
       @set('content', filtered)
 
-  filter: ''
